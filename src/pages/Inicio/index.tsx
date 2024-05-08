@@ -21,7 +21,7 @@ export default function Inicio() {
           </div>
         ))}
       </div>
-      <h3> Nossa casa </h3>
+      <h3 className={stylesTema.titulo}> Nossa casa </h3>
       <div className={styles.nossaCasa}>
         <img src={nossaCasa} alt="Casa do aluroni" />
         <div className={styles.nossaCasa_endereco}>
