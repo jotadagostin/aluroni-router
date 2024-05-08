@@ -1,12 +1,16 @@
 import styles from "./Sobre.module.scss";
 import stylesTema from "styles/Tema.module.scss";
+import casa from "assets/sobre/casa.png";
+import massa1 from "assets/sobre/massa1.png";
+import massa2 from "assets/sobre/massa2.png";
 
+const imagens = [massa1, massa2];
 export default function Sobre() {
   return (
     <section>
       <h3 className={stylesTema.titulo}>Sobre</h3>
       <div className={styles.sobreNos}>
-        <img src={} alt="Casa Aluroni" />
+        <img src={casa} alt="Casa Aluroni" />
         <div className={styles.sobreNos_texto}></div>
         <p>
           Nós do Aluroni oferecemos a vocês, nossos queridos clientes, a Massa
@@ -24,7 +28,13 @@ export default function Sobre() {
           carne ou massa!
         </p>
       </div>
-      <div className={styles.imagens}></div>
+      <div className={styles.imagens}>
+        {imagens.map((imagem, index) => (
+          <div key={index} className={styles.imagens__imagem}>
+            <img src={imagem} alt="imagem da massa" />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
