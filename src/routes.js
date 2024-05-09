@@ -4,6 +4,7 @@ import Menu from "components/menu";
 import Cardapio from "pages/Cardapio";
 import Inicio from "pages/Inicio";
 import NotFound from "pages/NotFound";
+import Prato from "pages/Pratos";
 import Sobre from "pages/Sobre";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ export default function appRouter() {
             <Route path="cardapio" element={<Cardapio />} />
             <Route path="sobre" element={<Sobre />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="prato:" element={<Prato />} />
           </Route>
         </Routes>
         <Footer />
