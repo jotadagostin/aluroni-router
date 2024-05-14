@@ -5,7 +5,8 @@ import { Prato } from "types/Prato";
 
 export default function Item(props: Prato) {
   const { id, title, description, photo } = props;
-  const navigate = useNavigate;
+
+  const navigate = useNavigate();
   return (
     <div className={styles.item} onClick={() => navigate(`/prato/${id}`)}>
       <div className={styles.item__imagem}>
